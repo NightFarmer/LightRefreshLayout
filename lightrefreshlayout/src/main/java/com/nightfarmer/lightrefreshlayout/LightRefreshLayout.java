@@ -317,6 +317,8 @@ public class LightRefreshLayout extends ViewGroup implements NestedScrollingPare
 
         mNestedScrollingChildHelper = new NestedScrollingChildHelper(this);
         setNestedScrollingEnabled(true);
+
+        setHeadViewProvider(new DefaultRefreshHeadProvider());
     }
 
     protected int getChildDrawingOrder(int childCount, int i) {
@@ -1309,7 +1311,7 @@ public class LightRefreshLayout extends ViewGroup implements NestedScrollingPare
     }
 
 
-    interface OnRefreshListener extends android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener {
+    public interface OnRefreshListener extends android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener {
         void onCancel();
     }
 

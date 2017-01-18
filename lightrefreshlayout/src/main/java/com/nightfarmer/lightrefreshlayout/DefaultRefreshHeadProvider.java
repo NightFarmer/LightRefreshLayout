@@ -1,32 +1,29 @@
-package com.nightfarmer.lightrefreshlayout.sample;
+package com.nightfarmer.lightrefreshlayout;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.nightfarmer.lightrefreshlayout.LightRefreshHeadProvider;
-
 /**
- * Created by zhangfan on 2017/1/17 0017.
+ * Created by zhangfan on 2017/1/18 0018.
  */
 
-public class MyLightRefreshHead implements LightRefreshHeadProvider<MyLightRefreshHead.HeadViewHolder> {
-
+class DefaultRefreshHeadProvider implements LightRefreshHeadProvider<DefaultRefreshHeadProvider.HeadViewHolder> {
 
     @Override
-    public MyLightRefreshHead.HeadViewHolder getHeadView(ViewGroup parent) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.layout_swiperefresh_head, parent, false);
+    public DefaultRefreshHeadProvider.HeadViewHolder getHeadView(ViewGroup parent) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.light_refresh_default_head, parent, false);
         return new HeadViewHolder(view);
     }
 
     @Override
-    public void onProgressChange(MyLightRefreshHead.HeadViewHolder headHolder, float progress, int state) {
+    public void onProgressChange(DefaultRefreshHeadProvider.HeadViewHolder headHolder, float progress, int state) {
         switch (state) {
             case 0: {
-                if(progress>1){
+                if (progress > 1) {
                     headHolder.tv_label.setText("松开刷新");
-                }else{
+                } else {
                     headHolder.tv_label.setText("下拉刷新");
                 }
                 break;

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder> {
 
+    public int dataListSize = 10;
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -25,7 +26,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
 
     @Override
     public int getItemCount() {
-        return 1;
+        return dataListSize;
     }
 
     class MyViewHolder extends RecyclerView.ViewHolder {

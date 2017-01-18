@@ -9,6 +9,11 @@ import android.view.ViewGroup;
 
 public interface LightRefreshHeadProvider<T extends LightRefreshHeadProvider.HeadViewHolder> {
 
+    /**
+     * 实例化并返回一个头部View的Holder
+     * @param parent 父级View，也就是LightRefreshLayout
+     * @return HeadViewHolder
+     */
     T getHeadView(ViewGroup parent);
 
     /**
