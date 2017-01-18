@@ -15,7 +15,16 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final LightRefreshLayout lightRefreshLayout = (LightRefreshLayout) findViewById(R.id.lightRefreshLayout);
+
 //        lightRefreshLayout.setHeadViewProvider(new MyLightRefreshHead());
+
+//        lightRefreshLayout.setHeadViewProvider(new MyLightRefreshHead2());
+//        lightRefreshLayout.setDistanceToTriggerSync(150);//设置拖拽阀值
+
+//        lightRefreshLayout.setHeadViewProvider(new MyLightRefreshHead3());
+//        lightRefreshLayout.setDistanceToTriggerSync(150);//设置拖拽阀值
+
+        lightRefreshLayout.setHeadViewProvider(new MyLightRefreshHead4());
 
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));

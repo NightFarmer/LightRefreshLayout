@@ -3,9 +3,13 @@
 本组件借鉴于`SwipeRefreshLayout`，并提供了刷新头部的定制接口，拥有比`SwipeRefreshLayout`更加灵活的定制特性。
 
 ## 效果图
-![img1]()
-![img2]()
-![img3]()
+### 默认
+![default](https://raw.githubusercontent.com/NightFarmer/LightRefreshLayout/master/sample/screenshot/refresh1.gif)
+### 自定义示例
+![img1](https://raw.githubusercontent.com/NightFarmer/LightRefreshLayout/master/sample/screenshot/refresh5.gif)
+![img2](https://raw.githubusercontent.com/NightFarmer/LightRefreshLayout/master/sample/screenshot/refresh4.gif)
+![img3](https://raw.githubusercontent.com/NightFarmer/LightRefreshLayout/master/sample/screenshot/refresh3.gif)
+![img4](https://raw.githubusercontent.com/NightFarmer/LightRefreshLayout/master/sample/screenshot/refresh2.gif)
 
 ## 使用方式
 

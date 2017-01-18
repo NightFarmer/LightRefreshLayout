@@ -341,6 +341,9 @@ public class LightRefreshLayout extends ViewGroup implements NestedScrollingPare
     private LightRefreshHeadProvider headViewProvider;
 
     private void setHeadView(View headView) {
+        if (mHeadView != null) {
+            removeView(mHeadView);
+        }
         this.mHeadView = headView;
         addView(mHeadView);
     }
@@ -646,7 +649,7 @@ public class LightRefreshLayout extends ViewGroup implements NestedScrollingPare
 //        mCircleView.layout((width / 2 - circleWidth / 2), mCurrentTargetOffsetTop,
 //                (width / 2 + circleWidth / 2), mCurrentTargetOffsetTop + circleHeight);
 
-        if(mHeadView==null){
+        if (mHeadView == null) {
             return;
         }
         int headWidth = mHeadView.getMeasuredWidth();
@@ -1041,7 +1044,7 @@ public class LightRefreshLayout extends ViewGroup implements NestedScrollingPare
                 public void onAnimationUpdate(ValueAnimator valueAnimator) {
                     Float value = (Float) valueAnimator.getAnimatedValue();
                     mHeadViewHeight = (int) value.floatValue();
-                    Log.i("xxx", "" + mHeadViewHeight);
+//                    Log.i("xxx", "" + mHeadViewHeight);
                     mHeadView.layout(0, 0, mHeadView.getMeasuredWidth(), mHeadViewHeight);
 //                    mHeadView.setLayoutParams(mHeadView.getLayoutParams());
                     mHeadView.measure(MeasureSpec.makeMeasureSpec(getMeasuredWidth() - getPaddingLeft() - getPaddingRight(), MeasureSpec.EXACTLY),
